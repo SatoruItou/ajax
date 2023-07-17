@@ -17,7 +17,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: password
     ports:
-      - "33306:33306"
+      - "3306:3306"
     volumes:
       - ./tmp/db:/var/lib/mysql:delegated
       - ./my.cnf:/etc/mysql/conf.d/my.cnf
