@@ -6,6 +6,9 @@ class TodosController < ApplicationController
   def create
     @todo = Todo.new(todo_params)
     @todo.save
+    respond_to do |format|
+      format.js { render js: @todo }
+    end
   end
 
   def update
